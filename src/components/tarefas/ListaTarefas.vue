@@ -6,7 +6,7 @@
         </button>
 
         <ul class="list-group">
-            <ItemTarefaVue v-for="tarefa in tarefas" :key="tarefa.id" :tarefa="tarefa" @editar="selecionarTarefaParaEdicao" @deletar="deletarTarefa"/>
+            <ItemTarefaVue v-for="tarefa in tarefas" :key="tarefa.id" :tarefa="tarefa" @concluir="concluirTarefa" @editar="selecionarTarefaParaEdicao" @deletar="deletarTarefa"/>
         </ul>
 
     <salvar-tarefa-vue
@@ -52,6 +52,7 @@ export default {
         },
         resetar(){
             this.exibirFormulario = false,
+            this.$store.commit('tarefa/tarefaLocalIndefinida')
             this.tarefaSelecionada = undefined
         },
 
@@ -60,16 +61,22 @@ export default {
             this.tarefaSelecionada = tarefa
             this.exibirFormulario = true
         },
-        deletarTarefa(tarefa) {
-            console.log(tarefa);
-        },
         
         criarTarefa(tarefa) {
             this.$store.dispatch('tarefa/criarTarefas', tarefa)
+            this.resetar()
         },
         editarTarefa(tarefa){
             this.$store.dispatch('tarefa/editarTarefas', tarefa)
+            this.resetar()
         },
+        deletarTarefa(tarefa){
+            this.$store.dispatch('tarefa/deletarTarefas', tarefa)
+            this.resetar()
+        },
+        concluirTarefa(tarefa){
+            this.$store.dispatch('tarefa/concluirTarefas', tarefa)
+        }
     }
 }
 </script>

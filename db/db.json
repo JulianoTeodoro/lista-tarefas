@@ -8,10 +8,10 @@
     {
       "id": 2,
       "nome": "Aprender Vuex",
-      "concluido": true
+      "concluido": false
     },
     {
-      "nome": "Aprender PHP",
+      "nome": "Aprender Java",
       "concluido": false,
       "id": 3
     },
@@ -19,11 +19,6 @@
       "nome": "Aprender Axios",
       "concluido": true,
       "id": 4
-    },
-    {
-      "nome": "Aprender Algo",
-      "concluido": true,
-      "id": 5
     }
   ]
 }

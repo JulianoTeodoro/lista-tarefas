@@ -8,7 +8,7 @@
         <button class="btn btn-danger" @click="$emit('deletar', tarefa)">
             <i class="bi bi-trash-fill"></i>
         </button>
-        <button :class="concluido" @click="$emit('concluir', tarefa)">
+        <button :class="concluido" @click.prevent="$emit('concluir', tarefa)">
             <i class="bi bi-check2"></i>
         </button>
 

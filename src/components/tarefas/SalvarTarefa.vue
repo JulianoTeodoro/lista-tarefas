@@ -32,7 +32,6 @@ export default {
             ? 'criar'
             : 'editar'
             this.$emit(operacao, this.tarefaLocal)
-            console.log(operacao)
         },
 
     }
