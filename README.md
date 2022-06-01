@@ -1,24 +1,2 @@
-# lista-de-tarefas
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# lista-tarefas
+Esse projeto traz uma aplicação Lista de Tarefas em Vue.JS, usando Axios para fazer as requisições, e utilizando JSON-Server como API para tratamento de dados
